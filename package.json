@@ -1,6 +1,6 @@
 {
   "name": "cv-lit-element",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "My CV as LitElement's components",
   "source": "src/index.html",
   "browser": "build/index.html",
@@ -10,7 +10,7 @@
     "lint": "npm run lint:lit-analyzer && npm run lint:eslint",
     "lint:eslint": "eslint 'src/**/*.ts'",
     "lint:lit-analyzer": "lit-analyzer",
-    "serve": "parcel serve src/index.html --no-cache"
+    "serve": "parcel serve src/index.html"
   },
   "repository": {
     "type": "git",
@@ -22,10 +22,6 @@
   ],
   "author": "Dawid Drelichowski",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/dawid-drelichowski/cv-lit-element/issues"
-  },
-  "homepage": "https://github.com/dawid-drelichowski/cv-lit-element#readme",
   "devDependencies": {
     "@parcel/transformer-typescript-tsc": "^2.0.0-beta.1",
     "@typescript-eslint/eslint-plugin": "^4.14.2",

@@ -49,6 +49,14 @@ li:before {
   margin-left: -1em;
 }
 
+dt {
+  font-weight: bold;
+}
+
+dd {
+  padding: 0.25em 0;
+}
+
 a {
   color: var(--font-color);
 }

@@ -14,8 +14,14 @@ body {
 }
 
 header {
+  display: flex;
   text-align: center;
+  align-items: center;
   border-bottom: 2px solid var(--borders-color);
+}
+
+img {
+  margin: 10px;
 }
 
 h2 {
@@ -43,6 +49,14 @@ li:before {
   margin-left: -1em;
 }
 
+dt {
+  font-weight: bold;
+}
+
+dd {
+  padding: 0.25em 0;
+}
+
 a {
   color: var(--font-color);
 }
@@ -53,6 +67,10 @@ a {
 
 .no-margin {
   margin: 0;
+}
+
+.grow {
+  flex-grow: 1;
 }
 
 @media print {

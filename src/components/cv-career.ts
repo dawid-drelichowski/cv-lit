@@ -25,7 +25,7 @@ export class CvCareer extends LitElement {
     }
 
     .date {
-      width: 20%;
+      width: 25%;
       text-align: right;
     }
   `;

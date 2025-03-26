@@ -32,6 +32,6 @@
     "prettier": "^2.7.1"
   },
   "dependencies": {
-    "lit-element": "^3.2.2"
+    "lit-element": "^4.1.1"
   }
 }

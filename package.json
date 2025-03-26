@@ -28,7 +28,7 @@
     "@typescript-eslint/parser": "^5.42.0",
     "eslint": "8.26.0",
     "lit-analyzer": "^1.2.1",
-    "parcel": "^2.12.0",
+    "parcel": "^2.14.2",
     "prettier": "^2.7.1"
   },
   "dependencies": {

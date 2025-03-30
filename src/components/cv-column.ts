@@ -1,11 +1,5 @@
-import {
-  css,
-  CSSResult,
-  customElement,
-  html,
-  LitElement,
-  TemplateResult,
-} from 'lit-element';
+import {css, html, LitElement, type CSSResult, type TemplateResult} from 'lit';
+import {customElement} from 'lit/decorators.js';
 
 @customElement('cv-column')
 export class CvColumn extends LitElement {

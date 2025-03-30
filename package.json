@@ -1,16 +1,17 @@
 {
-  "name": "cv-lit-element",
+  "name": "cv-lit",
   "version": "2.0.0",
-  "description": "My CV as LitElement's components",
+  "description": "My CV as Lit components",
   "source": "src/index.html",
   "type": "module",
   "scripts": {
-    "build": "parcel build",
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
     "format": "prettier src/* --write",
     "lint": "npm run lint:lit-analyzer && npm run lint:eslint",
     "lint:eslint": "eslint 'src/**/*.ts'",
-    "lint:lit-analyzer": "lit-analyzer",
-    "start": "parcel"
+    "lint:lit-analyzer": "lit-analyzer"
   },
   "repository": {
     "type": "git",
@@ -23,15 +24,15 @@
   "author": "Dawid Drelichowski",
   "license": "ISC",
   "devDependencies": {
-    "@parcel/transformer-typescript-tsc": "^2.12.0",
     "@typescript-eslint/eslint-plugin": "^5.42.0",
     "@typescript-eslint/parser": "^5.42.0",
     "eslint": "8.26.0",
-    "lit-analyzer": "^1.2.1",
-    "parcel": "^2.12.0",
-    "prettier": "^2.7.1"
+    "lit-analyzer": "^2.0.3",
+    "prettier": "^3.5.3",
+    "vite": "^6.2.3",
+    "vite-plugin-checker": "^0.9.1"
   },
   "dependencies": {
-    "lit-element": "^3.2.2"
+    "lit": "^3.2.1"
   }
 }

@@ -1,4 +1,4 @@
-import type { UserConfig } from 'vite';
+import type {UserConfig} from 'vite';
 import checker from 'vite-plugin-checker';
 
 export default {
@@ -12,7 +12,5 @@ export default {
     port: 3000,
     strictPort: true,
   },
-  plugins: [
-    checker({ typescript: true })
-  ]
+  plugins: [checker({typescript: true})],
 } satisfies UserConfig;

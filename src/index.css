@@ -74,6 +74,7 @@ a {
 }
 
 @media print {
+  /* eslint-disable-next-line css/use-baseline */
   @page {
     size: A4;
   }

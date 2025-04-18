@@ -1,4 +1,4 @@
-name: Playwright Tests
+name: Tests
 on:
   push:
     branches:
@@ -21,6 +21,6 @@ jobs:
       - name: Install Playwright Browsers
         run: npx playwright install --with-deps
       - name: Start server
-        run: npm run preview &
+        run: npm run preview
       - name: Run tests
         run: npm test

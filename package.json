@@ -3,6 +3,10 @@
   "version": "2.0.0",
   "description": "My CV as Lit components",
   "source": "src/index.html",
+  "engines": {
+    "node": ">=22"
+  },
+  "private": true,
   "type": "module",
   "scripts": {
     "dev": "vite",

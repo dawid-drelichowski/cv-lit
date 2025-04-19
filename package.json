@@ -16,7 +16,7 @@
     "lint": "npm run lint:lit-analyzer && npm run lint:eslint",
     "lint:eslint": "eslint .",
     "lint:lit-analyzer": "lit-analyzer",
-    "test": "playwright test"
+    "test": "playwright install chromium && playwright test"
   },
   "repository": {
     "type": "git",

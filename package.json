@@ -31,7 +31,7 @@
   "devDependencies": {
     "@eslint/css": "^0.8.1",
     "@eslint/js": "^9.27.0",
-    "@html-eslint/eslint-plugin": "^0.40.3",
+    "@html-eslint/eslint-plugin": "^0.41.0",
     "@percy/cli": "^1.30.11",
     "@percy/playwright": "^1.0.8",
     "@playwright/test": "^1.52.0",

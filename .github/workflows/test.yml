@@ -24,5 +24,5 @@ jobs:
         run: npm run preview & npx wait-on http://localhost:4173
       - name: Run tests
         env:
-            PERCY_TOKEN: ${{ secrets.PERCY_TOKEN }}
+          PERCY_TOKEN: ${{ secrets.PERCY_TOKEN }}
         run: npx percy exec -- npm test

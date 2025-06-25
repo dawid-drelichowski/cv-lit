@@ -23,22 +23,7 @@ jobs:
       - name: Start server
         run: npm run preview & npx wait-on http://localhost:4173
       - name: Run tests
-        id: run-tests
         env:
           PERCY_TOKEN: ${{ secrets.PERCY_TOKEN }}
-        run: |
-          npx percy exec -- npm test
-          BUILD_ID=$(npx percy build:id)
-          echo "BUILD_ID=$BUILD_ID" >> $GITHUB_OUTPUT
-      - name: Check visual tests status
-        env:
-          PERCY_TOKEN: ${{ secrets.PERCY_TOKEN }}
-        run: |
-          BUILD_ID="${{ steps.run-tests.outputs.BUILD_ID }}"
-          npx percy build:wait --build=$BUILD_ID
-          BUILD_STATUS=$(npx percy build:status --build=$BUILD_ID)
-          if [ "$BUILD_STATUS" = "failed" ]; then
-            echo "Percy build failed - failing GitHub Actions"
-            exit 1
-          fi
+        run: npx percy exec --fail-on-changes -- npm test
 

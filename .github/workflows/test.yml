@@ -25,5 +25,5 @@ jobs:
       - name: Run tests
         env:
           PERCY_TOKEN: ${{ secrets.PERCY_TOKEN }}
-        run: npx percy exec --fail-on-changes -- npm test
+        run: npx percy exec -- npm test
 

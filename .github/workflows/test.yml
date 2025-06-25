@@ -28,7 +28,7 @@ jobs:
           PERCY_TOKEN: ${{ secrets.PERCY_TOKEN }}
         run: |
           npx percy exec -- npm test
-          BUILD_ID=${npx percy build:id}
+          BUILD_ID=$(npx percy build:id)
           echo "BUILD_ID=$BUILD_ID" >> $GITHUB_OUTPUT
       - name: Check visual tests status
         env:

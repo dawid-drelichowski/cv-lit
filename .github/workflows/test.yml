@@ -26,3 +26,14 @@ jobs:
         env:
           PERCY_TOKEN: ${{ secrets.PERCY_TOKEN }}
         run: npx percy exec -- npm test
+      - name: Check visual tests status
+        env:
+          PERCY_TOKEN: ${{ secrets.PERCY_TOKEN }}
+        run: |
+          npx percy build:wait
+          BUILD_STATUS=$(npx percy build:status)
+          if [ "$BUILD_STATUS" = "failed" ]; then
+            echo "Percy build failed - failing GitHub Actions"
+            exit 1
+          fi
+

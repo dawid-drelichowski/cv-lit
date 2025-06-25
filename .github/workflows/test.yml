@@ -26,3 +26,4 @@ jobs:
         env:
           PERCY_TOKEN: ${{ secrets.PERCY_TOKEN }}
         run: npx percy exec -- npm test
+

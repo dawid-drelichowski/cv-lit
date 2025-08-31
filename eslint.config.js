@@ -9,13 +9,15 @@ import prettierConfig from 'eslint-config-prettier';
 
 export default defineConfig([
   globalIgnores(['dist']),
-  {files: ['**/*.{js,ts}']},
   {
     files: ['**/*.{js,ts}'],
     languageOptions: {globals: globals.browser},
   },
   {files: ['**/*.{js,ts}'], plugins: {js}, extends: ['js/recommended']},
-  tseslint.configs.recommended,
+  ...tseslint.config({
+    files: ['**/*.{js,ts}'],
+    extends: [tseslint.configs.recommended],
+  }),
   {
     plugins: {prettier: prettierPlugin},
     rules: {
@@ -34,16 +36,16 @@ export default defineConfig([
     },
   },
   {
-    ...html.configs['flat/recommended'],
     files: ['**/*.html'],
+    plugins: {
+      html,
+    },
+    language: 'html/html',
     rules: {
-      ...html.configs['flat/recommended'].rules,
-      '@html-eslint/indent': 'off',
-      '@html-eslint/require-closing-tags': ['error', {selfClosing: 'always'}],
-      '@html-eslint/no-extra-spacing-attrs': [
-        'error',
-        {enforceBeforeSelfClose: true},
-      ],
+      ...html.configs.recommended.rules,
+      'html/indent': 'off',
+      'html/require-closing-tags': ['error', {selfClosing: 'always'}],
+      'html/no-extra-spacing-attrs': ['error', {enforceBeforeSelfClose: true}],
     },
   },
 ]);

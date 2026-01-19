@@ -35,7 +35,7 @@
     "@percy/cli": "^1.31.7",
     "@percy/playwright": "^1.0.10",
     "@playwright/test": "^1.57.0",
-    "@types/node": "^25.0.6",
+    "@types/node": "^25.0.9",
     "eslint": "^9.39.2",
     "eslint-config-prettier": "^10.1.8",
     "eslint-plugin-prettier": "^5.5.4",

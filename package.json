@@ -30,7 +30,7 @@
   "license": "ISC",
   "devDependencies": {
     "@eslint/css": "^0.14.1",
-    "@eslint/js": "^9.38.0",
+    "@eslint/js": "^10.0.1",
     "@html-eslint/eslint-plugin": "^0.55.0",
     "@percy/cli": "^1.31.8",
     "@percy/playwright": "^1.0.10",

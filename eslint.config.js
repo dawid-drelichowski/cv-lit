@@ -43,9 +43,11 @@ export default defineConfig([
     language: 'html/html',
     rules: {
       ...html.configs.recommended.rules,
+      ...prettierConfig.rules,
+
       'html/indent': 'off',
       'html/require-closing-tags': ['error', {selfClosing: 'always'}],
-      'html/no-extra-spacing-attrs': ['error', {enforceBeforeSelfClose: true}],
+      'html/no-extra-spacing-tags': 'off',
     },
   },
 ]);

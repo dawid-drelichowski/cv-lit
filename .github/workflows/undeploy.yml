@@ -1,0 +1,26 @@
+name: Remove GitHub Pages deployment on branch delete
+
+on:
+  delete:
+
+permissions:
+  contents: write
+
+jobs:
+  undeploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout gh-pages branch
+        uses: actions/checkout@v4
+        with:
+          ref: gh-pages
+      - name: Remove deployment directory
+        run: |
+          BRANCH="${{ github.event.ref }}"
+          if [ -d "$BRANCH" ]; then
+            git config user.name "github-actions[bot]"
+            git config user.email "github-actions[bot]@users.noreply.github.com"
+            git rm -rf "$BRANCH"
+            git commit -m "Remove deployment for deleted branch: ${BRANCH}"
+            git push
+          fi

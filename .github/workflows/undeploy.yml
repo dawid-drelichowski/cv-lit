@@ -2,9 +2,6 @@ name: Remove GitHub Pages deployment on branch delete
 
 on:
   delete:
-    branches:
-      - frontend
-      - 'cv/**'
 
 permissions:
   contents: write

@@ -11,6 +11,8 @@ jobs:
   lint:
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
       - name: Setup
         uses: ./.github/actions/setup
       - name: Run linter
@@ -19,6 +21,8 @@ jobs:
   test:
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
       - name: Setup
         uses: ./.github/actions/setup
       - name: Build app
@@ -35,6 +39,8 @@ jobs:
     runs-on: ubuntu-latest
     if: github.ref_name == 'main' || github.ref_name == 'frontend' || github.event_name == 'workflow_dispatch'
     steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
       - name: Setup
         uses: ./.github/actions/setup
       - name: Set base path and deploy destination

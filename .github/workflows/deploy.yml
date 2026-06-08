@@ -1,7 +1,9 @@
 name: Deploy to GitHub Pages
 
 on:
-  push:
+  workflow_run:
+    workflows: [Lint, Test]
+    types: [completed]
     branches:
       - main
       - frontend
@@ -12,8 +14,24 @@ permissions:
 
 jobs:
   deploy:
+    if: ${{ github.event_name == 'workflow_dispatch' || github.event.workflow_run.conclusion == 'success' }}
     runs-on: ubuntu-latest
     steps:
+      - name: Check that both Lint and Test passed
+        if: github.event_name != 'workflow_dispatch'
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const otherWorkflow = context.payload.workflow_run.name === 'Lint' ? 'Test' : 'Lint';
+            const runs = await github.rest.actions.listWorkflowRunsForRepo({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              head_sha: context.payload.workflow_run.head_sha,
+              status: 'success',
+              per_page: 50
+            });
+            const passed = runs.data.workflow_runs.some(run => run.name === otherWorkflow);
+            if (!passed) core.setFailed(`${otherWorkflow} has not passed for this commit`);
       - name: Checkout code
         uses: actions/checkout@v4
       - name: Set up Node.js
@@ -25,7 +43,7 @@ jobs:
       - name: Set base path and deploy destination
         id: config
         run: |
-          BRANCH="${{ github.ref_name }}"
+          BRANCH="${{ github.event.workflow_run.head_branch || github.ref_name }}"
           if [ "$BRANCH" = "main" ]; then
             echo "base=/cv-lit/" >> $GITHUB_OUTPUT
             echo "dest=." >> $GITHUB_OUTPUT

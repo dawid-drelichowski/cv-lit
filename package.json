@@ -44,7 +44,7 @@
     "prettier": "^3.8.4",
     "typescript-eslint": "^8.61.1",
     "vite": "^8.0.16",
-    "vite-plugin-checker": "^0.14.1"
+    "vite-plugin-checker": "^0.14.4"
   },
   "dependencies": {
     "lit": "^3.3.3"

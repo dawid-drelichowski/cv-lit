@@ -1,0 +1,263 @@
+name: Dawid Drelichowski
+title: Web Application Developer
+photo: images/dawid-drelichowski.jpg
+phone: '+48 695 175 944'
+phone_href: '+48695175944'
+email: dawid.drelichowski@gmail.com
+linkedin:
+  handle: dawiddrelichowski
+  url: https://www.linkedin.com/in/dawiddrelichowski
+github:
+  handle: dawid-drelichowski
+  url: https://github.com/dawid-drelichowski
+location: 'Wrocław, Poland'
+
+profile: >-
+  Highly resourceful, web applications architect and developer experienced in a wide
+  variety of business environments. Detail oriented engineer particularly interested
+  in client applications based on JavaScript. Certified Professional Scrum Master.
+  Optimistic and goal oriented team player, always on top of the latest trends and
+  technologies.
+
+technologies:
+  - level: Expert
+    items: 'TypeScript, JavaScript, HTML, CSS, React.'
+  - level: Advanced
+    items: 'Node.js, Angular, Vue, Docker, Express, Koa, Electron, Redux, RxJS, NgRx, Webpack, Playwright, Vitest.'
+  - level: Basic
+    items: 'PHP, Ember.js, Fastify, Sass, Less, Vite.'
+
+experience:
+  - position: Fullstack Developer
+    date: '09.2025 – present'
+    company: Miquido / Spotme
+    url: https://spotme.com/
+    url_label: spotme.com
+    technologies:
+      - 'JavaScript, TypeScript, Vue, Sass'
+      - 'Node.js, Express, CouchDB'
+      - 'Karma, Cypress'
+      - Docker
+      - 'GIT, GitHub, GitHub Actions'
+      - Claude Code
+
+  - position: Staff Frontend Developer
+    date: '08.2022 – 07.2025'
+    company: LiveChat / Text
+    technologies:
+      - 'JavaScript, TypeScript, Electron, React, Redux, Redux Saga, Tanstack Query'
+      - Node.js
+      - 'Playwright, Jest'
+      - 'GIT, GitHub, GitHub Actions'
+    projects:
+      - url: https://my.livechatinc.com/
+        label: my.livechatinc.com
+      - url: https://text.com/app
+        label: text.com/app
+
+  - position: Front End Architect
+    date: '03.2021 – 07.2022'
+    company: Edipresse Polska/Burda Media Polska
+    technologies:
+      - 'JavaScript, TypeScript, Vue, Vuex'
+      - 'Node.js, Express, Vue SSR'
+      - Jest
+      - 'GIT, GitLab'
+      - Docker
+    projects:
+      - url: https://modago.pl/
+        label: modago.pl
+
+  - position: 'Senior Software Engineer, Frontend Developer'
+    date: '12.2018 – 02.2021'
+    company: Showpad
+    projects:
+      - url: https://showpad.com/
+        label: showpad.com
+    technologies:
+      - 'JavaScript, TypeScript, Angular, RxJS, NgRx, Nx'
+      - 'Node.js, Koa'
+      - 'Jest, Karma, Mocha, Chai'
+      - Less
+      - 'GIT, GitLab'
+      - Docker
+      - Scrum
+
+  - position: Technical Team Lead
+    date: '02.2018 – 11.2018'
+    company: Shiji Group (former AC Project GmbH)
+    url: https://www.shijigroup.com/
+    url_label: shijigroup.com
+    technologies:
+      - 'JavaScript, TypeScript, Ember.js, Babel, Broccoli.js'
+      - QUnit
+      - Sass
+      - 'GIT, GitLab, Jenkins'
+      - Docker
+
+  - position: Software Development Engineer
+    date: '01.2016 – 01.2018'
+    company: Kelkoo Group (former LeGuide Group)
+    url: https://www.kelkoogroup.com/
+    url_label: www.kelkoogroup.com
+    technologies:
+      - 'PHP 7, Symfony 2, Laravel 5, Twig, Blade, PHPUnit, Behat'
+      - 'JavaScript, jQuery, Backbone.js, Lodash, Require.js, Webpack, Babel, Bower, Grunt'
+      - 'Karma, Mocha, Sinon'
+      - 'MySQL, MsSQL, Memcached'
+      - 'Bootstrap, Stylus, Sass'
+      - 'GIT, GitLab, Jenkins'
+      - 'Vagrant, Puppet, Docker'
+      - 'SEO, Scrum'
+    projects:
+      - url: http://www.ciao.co.uk
+        label: www.ciao.co.uk
+      - url: http://m.ciao.co.uk
+        label: m.ciao.co.uk
+
+  - position: JavaScript Developer
+    date: '10.2015 - 12.2015'
+    company: RebelMouse
+    url: https://www.rebelmouse.com
+    url_label: www.rebelmouse.com
+    technologies:
+      - 'JavaScript, jQuery, Backbone.js, Lodash, Require.js, Bower, Grunt'
+      - 'Karma, Mocha, Sinon'
+      - 'GIT, GitHub'
+    projects:
+      - url: https://www.rebelmouse.com
+        label: www.rebelmouse.com
+      - url: https://www.thedodo.com
+        label: www.thedodo.com
+
+  - position: Software Developer
+    date: '01.2014 – 09.2015'
+    company: Ciao/Shopping Guide GmbH
+    technologies:
+      - 'PHP, Symfony 2, Twig, PHPUnit'
+      - 'JavaScript, jQuery, Backbone.js, Lodash, Require.js, Babel, Bower, Grunt'
+      - 'Karma, Mocha, Sinon'
+      - 'MySQL, MsSQL, Memcached'
+      - Stylus
+      - 'GIT, GitLab, Jenkins'
+      - 'Vagrant, Puppet'
+      - 'SEO, Scrum'
+    projects:
+      - url: http://www.ciao.co.uk
+        label: www.ciao.co.uk
+
+  - position: Software Development Engineer
+    date: '10.2013 - 12.2013'
+    company: Intive (former SMT Software)
+    url: https://www.intive.com
+    url_label: www.intive.com
+    technologies:
+      - 'PHP, Zend Framework, PHPUnit'
+      - 'JavaScript, jQuery, jQuery UI'
+      - 'Liquibase, MySQL'
+      - 'SVN, GIT, TeamCity'
+      - Scrum
+
+  - position: 'Software Developer, Scrum Master'
+    date: '05.2011 - 09.2013'
+    company: NetTeam Solutions
+    url: http://www.netteam.pl
+    url_label: www.netteam.pl
+    technologies:
+      - 'PHP, Symfony 2, Doctrine, Twig, PHPUnit'
+      - 'JavaScript, jQuery, jQuery UI, Backbone.js, Lodash, Require.js, Bower, Grunt'
+      - Bootstrap
+      - 'MySQL, PostgreSQL, MongoDB'
+      - 'GIT, GitLab, GitLab CI'
+      - Scrum
+
+  - position: Web Developer
+    date: '10.2009 - 04.2011'
+    company: Swoopo
+    technologies:
+      - 'Java, PHP, Zend Framework'
+      - 'JavaScript, jQuery, jQuery UI'
+      - 'MySQL, Memcached'
+      - SVN
+
+  - position: Software Developer
+    date: '10.2006 - 09.2009'
+    company: Ciao/Microsoft
+    technologies:
+      - PHP
+      - 'JavaScript, jQuery, jQuery UI'
+      - 'ActionScript 3, Flash'
+      - 'PostgreSQL, MySQL, Sybase, Memcached'
+      - SEO
+      - 'CVS, SVN'
+    projects:
+      - url: http://www.ciao.co.uk
+        label: www.ciao.co.uk
+      - url: http://www.ciao.com
+        label: www.ciao.com
+
+  - position: Software Developer
+    date: '10.2005 - 09.2006'
+    company: Elektroniczne Systemy Sprzedaży (ESS)
+    url: http://www.merlinx.pl
+    url_label: www.merlinx.pl
+    technologies:
+      - PHP
+      - 'XSLT, XSLFO'
+      - 'JavaScript, jQuery'
+    projects:
+      - url: http://www.suntrips.de
+        label: www.suntrips.de
+
+  - position: 'Web Developer, Database Designer'
+    date: '07.2005 - 09.2005'
+    company: Masterfin
+    technologies:
+      - PHP
+      - JavaScript
+      - MySQL
+
+  - position: 'Helpdesk, Software and Database Service, Webmaster'
+    date: '03.2005 - 06.2005'
+    company: Projektowanie Systemów Informatycznych
+    url: https://www.psi.wroc.pl
+    url_label: www.psi.wroc.pl
+    technologies:
+      - 'Clipper, PHP'
+      - 'Dbase, MySQL'
+    projects:
+      - url: http://www.panjust.pl
+        label: www.panjust.pl
+
+education:
+  - title: Professional Scrum Master I
+    date: '2012'
+    lines:
+      - '<a href="https://www.scrum.org/">Scrum.org</a> certificate'
+
+  - title: 'Training: Adobe Flash – Programming with Action Script 3'
+    date: '2008'
+    lines:
+      - Action Script programming course
+
+  - title: Zend Certified PHP 5 Engineer
+    date: '2008'
+    lines:
+      - Certification PHP 5
+
+  - title: 'College of Management "Edukacja", Wrocław, Poland'
+    date: '2003 - 2007'
+    lines:
+      - Bachelor of Computer Science
+      - 'Specialization: Internet Technology'
+
+  - title: 'Study of Computer Science, Wrocław, Poland'
+    date: '2001 - 2003'
+    lines:
+      - 'Specialization: Administration & management of intranet'
+
+other:
+  - name: Languages
+    value: 'Polish (native), English (B2+), German (A1)'
+  - name: Interests
+    value: 'Smart home automation, vinyl record collecting, mountain biking, skiing, technical reading'

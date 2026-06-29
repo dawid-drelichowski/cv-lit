@@ -43,7 +43,7 @@
     "lit-analyzer": "^2.0.3",
     "prettier": "^3.8.4",
     "typescript-eslint": "^8.61.1",
-    "vite": "^8.0.16",
+    "vite": "^8.1.0",
     "vite-plugin-checker": "^0.14.4"
   },
   "dependencies": {

@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>CV - {{ cv.name }}</title>
+    <link rel="stylesheet" href="index.css" />
+    <script type="module" src="index.ts"></script>
+  </head>
+  <body>
+    <header>
+      <img src="{{ cv.photo }}" alt="{{ cv.name }}" />
+      <div class="grow">
+        <h2>{{ cv.name }}</h2>
+        <address>
+          <a href="tel:{{ cv.phone_href }}">{{ cv.phone }}</a>
+          |
+          <a href="mailto:{{ cv.email }}">{{ cv.email }}</a>
+          <br />
+          LinkedIn:
+          <a href="{{ cv.linkedin.url }}">{{ cv.linkedin.handle }}</a>
+          | GitHub:
+          <a href="{{ cv.github.url }}">{{ cv.github.handle }}</a>
+          <br />
+          {{ cv.location }}
+        </address>
+        <h1>{{ cv.title }}</h1>
+      </div>
+    </header>
+    <main>
+      <cv-section label="Executive Profile">
+        <p class="text-justify no-margin">{{ cv.profile }}</p>
+      </cv-section>
+
+      <cv-section label="Technologies">
+        <dl class="no-margin">
+          {% for group in cv.technologies %}
+          <dt>{{ group.level }}:</dt>
+          <dd>{{ group.items }}</dd>
+          {% endfor %}
+        </dl>
+      </cv-section>
+
+      <cv-section label="Professional Experience">
+        <cv-column>
+          {% for item in cv.experience %}
+          <cv-career position="{{ item.position }}" date="{{ item.date }}">
+            <p><strong>{{ item.company }}</strong></p>
+            <p class="no-margin">Technologies:</p>
+            <ul>
+              {% for tech in item.technologies %}
+              <li>{{ tech }}</li>
+              {% endfor %}
+            </ul>
+            {% if item.projects %}
+            <p class="no-margin">Projects created:</p>
+            <ul>
+              {% for project in item.projects %}
+              <li><a href="{{ project.url }}">{{ project.label }}</a></li>
+              {% endfor %}
+            </ul>
+            {% endif %}
+            {% if item.url %}
+            <p>Company site: <a href="{{ item.url }}">{{ item.url_label }}</a></p>
+            {% endif %}
+          </cv-career>
+          {% endfor %}
+        </cv-column>
+      </cv-section>
+
+      <cv-section label="Education and Training" class="education">
+        <cv-column>
+          {% for item in cv.education %}
+          <cv-education title="{{ item.title }}" date="{{ item.date }}">
+            {% for line in item.lines %}
+            <p class="no-margin">{{ line | safe }}</p>
+            {% endfor %}
+          </cv-education>
+          {% endfor %}
+        </cv-column>
+      </cv-section>
+
+      <cv-section label="Other Information" class="other-info">
+        <cv-column>
+          {% for item in cv.other %}
+          <cv-other name="{{ item.name }}">
+            {{ item.value }}
+          </cv-other>
+          {% endfor %}
+        </cv-column>
+      </cv-section>
+    </main>
+  </body>
+</html>

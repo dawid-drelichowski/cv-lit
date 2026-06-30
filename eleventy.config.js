@@ -8,6 +8,7 @@ export default function (eleventyConfig) {
   });
 
   return {
+    htmlTemplateEngine: 'njk',
     dir: {
       input: 'templates',
       output: 'src',

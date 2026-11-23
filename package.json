@@ -32,7 +32,7 @@
     "@eslint/css": "^2.0.1",
     "@eslint/js": "^10.0.1",
     "@html-eslint/eslint-plugin": "^0.68.0",
-    "@percy/cli": "^1.32.12",
+    "@percy/cli": "^1.33.1",
     "@percy/playwright": "^1.1.2",
     "@playwright/test": "^1.65.1",
     "@types/node": "^25.9.2",

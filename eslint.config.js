@@ -6,14 +6,19 @@ import html from '@html-eslint/eslint-plugin';
 import tseslint from 'typescript-eslint';
 import prettierPlugin from 'eslint-plugin-prettier';
 import prettierConfig from 'eslint-config-prettier';
+import yml from 'eslint-plugin-yml';
 
 export default defineConfig([
-  globalIgnores(['dist']),
+  globalIgnores(['dist', 'templates']),
   {
     files: ['**/*.{js,ts}'],
     languageOptions: {globals: globals.browser},
   },
-  {files: ['**/*.{js,ts}'], plugins: {js}, extends: ['js/recommended']},
+  {
+    files: ['**/*.{js,ts}'],
+    plugins: {js},
+    extends: ['js/recommended'],
+  },
   ...tseslint.config({
     files: ['**/*.{js,ts}'],
     extends: [tseslint.configs.recommended],
@@ -48,6 +53,15 @@ export default defineConfig([
       'html/indent': 'off',
       'html/require-closing-tags': ['error', {selfClosing: 'always'}],
       'html/no-extra-spacing-tags': 'off',
+    },
+  },
+  ...yml.configs.recommended,
+  {
+    files: ['**/*.yml'],
+    rules: {
+      ...prettierConfig.rules,
+
+      'yml/no-empty-mapping-value': 'off',
     },
   },
 ]);
